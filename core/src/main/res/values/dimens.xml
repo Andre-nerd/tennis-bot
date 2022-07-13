@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    Кнопки-->
     <dimen name="main_button_width">328sp</dimen>
+    <dimen name="main_button_height">60sp</dimen>
+<!--    Отступы-->
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_84">84dp</dimen>
+    <dimen name="dp_122">122dp</dimen>
+
+<!--    Раземры шрифта-->
+    <dimen name="h1_tittle">28sp</dimen>
+
+
 </resources>

@@ -10,5 +10,13 @@
         android:id="@+id/firstFragment"
         android:name="com.zoom_machine.tennisbot.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@id/action_firstFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.zoom_machine.registration.presentation.ui.RegistrationFragment"
+        android:label="RegistrationFragment" />
 </navigation>
