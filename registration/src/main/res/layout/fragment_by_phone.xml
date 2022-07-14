@@ -18,8 +18,8 @@
             android:id="@+id/textInputLatitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/e_mail"
-            android:inputType="textEmailAddress" />
+            android:hint="@string/phone"
+            android:inputType="phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

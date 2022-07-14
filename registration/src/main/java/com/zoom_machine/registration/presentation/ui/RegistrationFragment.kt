@@ -29,7 +29,7 @@ class RegistrationFragment: Fragment() {
             TabPagerAdapter(
                 it,
                 lifecycle,
-                listOf(ByEmailFragment(), ByEmailFragment())
+                fragments
             )
         }
         binding.viewPager.adapter = adapter
@@ -40,7 +40,7 @@ class RegistrationFragment: Fragment() {
                     tab.text = resources.getString(R.string.by_e_mail)
                 }
                 1 -> {
-                    tab.text = resources.getString(R.string.phone)
+                    tab.text = resources.getString(R.string.by_phone)
                 }
             }
         }.attach()
@@ -50,5 +50,9 @@ class RegistrationFragment: Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object{
+        val fragments = listOf(ByEmailFragment(), ByPhoneFragment())
     }
 }

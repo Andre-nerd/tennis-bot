@@ -80,33 +80,79 @@
         app:layout_anchorGravity="bottom"
         app:layout_constraintEnd_toEndOf="@+id/tabs"
         app:layout_constraintStart_toStartOf="@+id/tabs"
-        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+        app:layout_constraintTop_toBottomOf="@+id/tabs">
+
+    </androidx.viewpager2.widget.ViewPager2>
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
         style="@style/ButtonOrangeStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/main_button_height"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/do_registration"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        <TextView
+            style="@style/TextViewH2"
+            android:textColor="@color/black_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_exist" />
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:id="@+id/textButtonEnter"
+            style="@style/TextViewH2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/otherWayButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="394dp" />
+        android:src="@drawable/other_way_button"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/googleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/google_button"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/otherWayButton"
+        app:layout_constraintStart_toStartOf="@+id/otherWayButton" />
+
+    <ImageView
+        android:id="@+id/yandexButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yandex_button"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/otherWayButton"
+        app:layout_constraintEnd_toEndOf="@+id/otherWayButton" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

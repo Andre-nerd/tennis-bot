@@ -5,5 +5,8 @@
     <string name="input_data_create_pass">Введите свои контактные данные\nи придумайте пароль</string>
     <string name="by_e_mail">ПО E-MAIL</string>
     <string name="e_mail">E-mail</string>
-    <string name="phone">ПО ТЕЛЕФОНУ</string>
+    <string name="by_phone">ПО ТЕЛЕФОНУ</string>
+    <string name="phone">Телефон</string>
+    <string name="account_exist">Уже есть аккаунт?</string>
+    <string name="enter">Войти</string>
 </resources>
