@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.zoom_machine.registration.R
 import com.zoom_machine.registration.databinding.FragmentRegistrationBinding
 import com.zoom_machine.registration.presentation.adapters.TabPagerAdapter
 
-class RegistrationFragment: Fragment() {
+class RegistrationFragment : Fragment() {
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
     private var adapter: TabPagerAdapter? = null
@@ -44,7 +45,28 @@ class RegistrationFragment: Fragment() {
                 }
             }
         }.attach()
+        binding.run {
+            registrationButton.setOnClickListener {
+                click()
+            }
+            textButtonEnter.setOnClickListener {
+                click()
+            }
+            googleButton.setOnClickListener {
+                click()
+            }
+            yandexButton.setOnClickListener {
+                click()
+            }
+            otherWayButton.setOnClickListener {
+                click()
+            }
+        }
+    }
 
+    private fun click() {
+        Toast.makeText(requireContext(), resources.getString(R.string.click), Toast.LENGTH_SHORT)
+            .show()
     }
 
     override fun onDestroyView() {
@@ -52,7 +74,7 @@ class RegistrationFragment: Fragment() {
         _binding = null
     }
 
-    companion object{
+    companion object {
         val fragments = listOf(ByEmailFragment(), ByPhoneFragment())
     }
 }
